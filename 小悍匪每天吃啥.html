@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>午饭选择器</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5">
+</head>
+
+<body>
+    <style>
+       *{
+        font-family: fangsong;
+        }
+        #but {
+            display: block;
+            width: 100px;
+            background: #05c9ff;
+            text-align: center;
+            padding: 10px 0;
+            margin: 0 auto;
+            border-radius: 9%;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 700;
+            box-shadow: 4px 5px 15px 1px #707070;
+            cursor: pointer;
+        }
+    </style>
+    <div>
+        <h1 style="text-align: center;">亲爱的西伯利亚悍匪请选择吃什么,你只有一次机会</h1>
+        <a id="but">吃什么</a>
+        <h1 id="show" style="text-align: center;"></h1>
+    </div>
+    <script>
+        var x = 1
+        var show = document.getElementById("show")
+        document.getElementById("but").onclick = function () {
+            var randNum = Math.floor(Math.random() * 15) + 1;
+            if (x == 1) {
+                if (randNum == 1) {
+                    show.innerHTML = "刀削面"
+                    x += 1
+                } else if (randNum == 2) {
+                    show.innerHTML = "麻食"
+                    x += 1
+                } else if (randNum == 3) {
+                    show.innerHTML = "米饭"
+                    x += 1
+                } else if (randNum == 4) {
+                    show.innerHTML = "米粉"
+                    x += 1
+                } else if (randNum == 5) {
+                    show.innerHTML = "凉皮"
+                    x += 1
+                } else if (randNum == 6) {
+                    show.innerHTML = "乌冬面"
+                    x += 1
+                } else if (randNum == 7) {
+                    show.innerHTML = "椒麻鸡"
+                    x += 1
+                } else if (randNum == 8) {
+                    show.innerHTML = "咖喱鸡"
+                    x += 1
+                } else if (randNum == 9) {
+                    show.innerHTML = "黄焖鸡"
+                    x += 1
+                } else if (randNum == 10) {
+                    show.innerHTML = "麻将米线"
+                    x += 1
+                } else if (randNum == 11) {
+                    show.innerHTML = "捞汁小年糕"
+                    x += 1
+                } else if (randNum == 12) {
+                    show.innerHTML = "酸汤小揪面"
+                    x += 1
+                } else if (randNum == 13) {
+                    show.innerHTML = "麻辣香锅"
+                    x += 1
+                } else if (randNum == 14) {
+                    show.innerHTML = "石锅饭"
+                    x += 1
+                } else {
+                    show.innerHTML = "重新选"
+                }
+            } else {
+                alert("你已经确定好了")
+            }
+        }
+    </script>
+</body>
+
+</html>
